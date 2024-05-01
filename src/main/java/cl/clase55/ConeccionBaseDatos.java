@@ -13,7 +13,7 @@ public class ConeccionBaseDatos {
 		try {
 			
 			Class.forName("com.mysql.jdbc.Driver");
-			String stringConection="jdbc:mysql://localhost:3306/mascotainadorñ";
+			String stringConection="jdbc:mysql://localhost:3306/mascotainador";
 			String user="tester";
 			String pass="Prueba1234";
 			conn= DriverManager.getConnection(stringConection,user,pass);
