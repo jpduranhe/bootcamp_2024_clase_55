@@ -20,10 +20,10 @@ public class FormularioCalculo extends HttpServlet {
 						
 						<form action="/clase_55/Calculator">
 							<label>Numero 1</label>
-							<input name="numero1"/>
+							<input name="numero1" required/>
 							<br/>
 							<label>Numero 2</label>
-							<input name="numero2"/>
+							<input name="numero2" required/>
 							<br/>
 							<button>Calcular</button>
 						</form>

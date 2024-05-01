@@ -39,13 +39,19 @@ public class Calculator extends HttpServlet {
 			numero1=request.getParameter("numero1");
 			numero2=request.getParameter("numero2");
 			
-			int num1= Integer.parseInt(numero1);
-			int num2= Integer.parseInt(numero2);
-			int resultadoCalculo=num1+num2;	
+			if((numero1== null || numero1.trim().isBlank()) || (numero2== null || numero2.trim().isBlank()) ) {
+				response.sendRedirect("error_formulariojsp.jsp");
+			}else {
+				
+				int num1= Integer.parseInt(numero1);
+				int num2= Integer.parseInt(numero2);
+				int resultadoCalculo=num1+num2;	
+				
+				request.setAttribute("resultadoCalculo", resultadoCalculo);
+				
+				request.getRequestDispatcher("resultado_calculator.jsp").forward(request, response);
+			}
 			
-			request.setAttribute("resultadoCalculo", resultadoCalculo);
-			
-			request.getRequestDispatcher("resultado_calculator.jsp").forward(request, response);
 		}
 		
 		
