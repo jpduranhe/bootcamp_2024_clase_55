@@ -29,4 +29,14 @@
     <servlet-name>FormularioCalculo</servlet-name>
     <url-pattern>/FormularioCalculo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConectarBDServlet</display-name>
+    <servlet-name>ConectarBDServlet</servlet-name>
+    <servlet-class>cl.clase55.ConectarBDServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConectarBDServlet</servlet-name>
+    <url-pattern>/ConectarBDServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
